@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html class="decks show  mz-js mz-no-touch mz-history mz-rgba mz-backgroundsize mz-opacity mz-cssanimations mz-csstransforms mz-csstransforms3d mz-csstransitions mz-localstorage mz-applicationcache mz-svg mz-fullscreen loaded mz-js mz-no-touch mz-history mz-rgba mz-backgroundsize mz-opacity mz-cssanimations mz-csstransforms mz-csstransforms3d mz-csstransitions mz-localstorage mz-applicationcache mz-svg mz-fullscreen ua-chrome" data-account="free"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>Git Basics</title>
+    
+
+    <link href="./files/css.css" rel="stylesheet" type="text/css">
+
+    <link href="./files/slides-731b0c2d2566595b275edbf76c3c0cb0.css" media="all" rel="stylesheet" type="text/css">
+    <link href="./files/application-70f68764ed9b07219d18751aa8ccd810.css" media="all" rel="stylesheet" type="text/css">
+    <script src="./files/modernizr-811daed07a17f831d04c27f90dcf22dd.js" type="text/javascript"></script>
+    
+  <link href="./files/deck-v1-7aa181759c4e6287fa3683fbbec60b10.css" media="all" rel="stylesheet" type="text/css">
+
+<style id="user-css-output" type="text/css"></style>
+
+  <script src="./files/embed.js" async="" type="text/javascript"></script></head>
+  <body >
+    <div id="container" class="container">
+      
+
+      
+      <div id="main" class="main" role="main">
+        
+
+
+
+<div class="marquee loading">
+
+	<div class="reveal-frame">
+		<div class="reveal-viewport theme-font-quicksand theme-color-sky-blue">
+			<div data-background-transition="fade" data-transition-speed="default" role="application" class="reveal default">
+				<div style="width: 960px; height: 700px; left: 50%; top: 50%; bottom: auto; right: auto; transform: translate(-50%, -50%) scale(0.750857); zoom: 1;" class="slides">
+					<section style="display: none;" class="past" hidden="" aria-hidden="true"><h1>
+<br><span style="font-size: 135.72px;"><br></span>
+</h1>
+<h1><span style="font-size: 135.72px;">git basicS</span></h1></section><section style="display: none;" class="past" hidden="" aria-hidden="true"><h2>
+<span style="font-size: 64.566px; text-align: left;">HISTORY</span><br>
+</h2>
+<div>
+<br><div style="text-align: center;"><span style="text-align: left; text-transform: uppercase;">GIT (NOUN)</span></div>
+<i style="text-align: left;"><div style="text-align: center;"><i>&nbsp; &nbsp; &nbsp; British English slang roughly equivalent to&nbsp;</i></div></i><i style="text-align: left;"><div style="text-align: center;"><i>&nbsp; &nbsp; &nbsp;"unpleasant person"</i></div></i>
+</div>
+<div>
+
+
+
+<p style="text-align: left; font-size: 35.81173324584961px; font-style: normal; font-variant: normal;"><i><br></i></p>
+</div>
+<blockquote class="fragment visible" data-fragment-index="0">
+<span style="font-size: 35.81173324584961px; font-style: italic; font-variant: normal;">"I'm an egotistical bastard, and I name all my projects after myself. First&nbsp;</span><i style="font-size: 35.81173324584961px; font-variant: normal;">'Linux'</i><span style="font-size: 35.81173324584961px; font-style: italic; font-variant: normal;">, now&nbsp;</span><i style="font-size: 35.81173324584961px; font-variant: normal;">'git'</i><span style="font-size: 35.81173324584961px; font-style: italic; font-variant: normal;">. "&nbsp;</span><br><span style="font-size: 35.81173324584961px; font-style: italic; font-variant: normal;">&nbsp;
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp;Linus Torvalds</span>
+</blockquote>
+<br></section><section style="display: none;" class="past" hidden="" aria-hidden="true"><h2 class="fragment visible" data-fragment-index="0">
+<br><br>
+</h2>
+<h2 data-fragment-index="0">DECENTRALIZED<br><br>
+</h2>
+<h2 class="fragment visible" data-fragment-index="1">FAST, Small footprint</h2>
+<div><br></div>
+<div class="fragment visible" data-fragment-index="2"><h2 style="font-style: normal; font-variant: normal;">COMPOSABLE / FLEXIBLE</h2></div>
+<h2><br></h2>
+<div><br></div></section><section style="display: none;" class="past" hidden="" aria-hidden="true"><h2>LINUX INSTALLATION</h2>
+<div><br></div>
+<div><br></div>
+<div>sudo apt-get install git</div>
+<div><br></div>
+<div>yum install git</div>
+<div><br></div>
+<div><br></div></section><section style="display: block;" class="past" hidden="" aria-hidden="true"><h2>CREATING A GIT REPO</h2>
+<div><br></div>
+<div>
+<pre><code class=" hljs ruby"><font color="#00ff00">~ <span class="hljs-variable">$</span></font><span class="hljs-variable"> </span>git init blog&nbsp;
+<span style=""><span class="hljs-constant">Initialized</span> empty <span class="hljs-constant">Git</span> repository <span class="hljs-keyword">in</span> /home/pokemon/blog/.git/&nbsp;</span></code><code class=" hljs "></code></pre>
+</div>
+<div>
+<br>
+</div>
+<pre class="fragment visible" data-fragment-index="0"><code class=" hljs mathematica">~/blog $ ls -la
+total <span class="hljs-number">12</span><span class="hljs-keyword">K</span>
+drwxrwxr-x  <span class="hljs-number">3</span> pokemon pokemon <span class="hljs-number">4.0</span><span class="hljs-keyword">K</span> <span class="hljs-number">2013</span>-<span class="hljs-number">10</span>-<span class="hljs-number">26</span> <span class="hljs-number">12</span>:<span class="hljs-number">45</span> ./
+drwxr-xr-x <span class="hljs-number">49</span> pokemon pokemon <span class="hljs-number">4.0</span><span class="hljs-keyword">K</span> <span class="hljs-number">2013</span>-<span class="hljs-number">10</span>-<span class="hljs-number">26</span> <span class="hljs-number">11</span>:<span class="hljs-number">40</span> ../
+drwxrwxr-x  <span class="hljs-number">8</span> pokemon pokemon <span class="hljs-number">4.0</span><span class="hljs-keyword">K</span> <span class="hljs-number">2013</span>-<span class="hljs-number">10</span>-<span class="hljs-number">26</span> <span class="hljs-number">11</span>:<span class="hljs-number">40</span> .git/</code></pre>
+<ul>
+<li class="fragment visible" data-fragment-index="1">
+<span style="text-align: center;">.git is directory tree all information of your repository</span><br>
+</li>
+<li class="fragment visible" data-fragment-index="2">
+<span style="text-align: center;">to un-git, simply delete </span><i style="text-align: center;">.git</i><span style="text-align: center;"> folder</span><br>
+</li>
+</ul></section><section style="display: block;" class="past" hidden="" aria-hidden="true"><h2>Cloning an Existing Repository</h2>
+<div><br></div>
+<div><pre><code class=" hljs erlang"><font color="#00ff00">~ $ git</font> clone https://github.com/pikachu/<span class="hljs-variable">TestRepo</span>.git blog
+<span class="hljs-variable">Cloning</span> into blog...
+remote: <span class="hljs-variable">Counting</span> objects: <span class="hljs-number">16</span>, done.
+remote: <span class="hljs-variable">Compressing</span> objects: <span class="hljs-number">100</span><span class="hljs-comment">% (6/6), done.</span>
+remote: <span class="hljs-variable">Total</span> <span class="hljs-number">16</span> (delta <span class="hljs-number">3</span>), reused <span class="hljs-number">16</span> (delta <span class="hljs-number">3</span>)
+<span class="hljs-variable">Unpacking</span> objects: <span class="hljs-number">100</span><span class="hljs-comment">% (16/16), done. </span></code></pre></div></section><section style="display: block;" class="present"><h2>Setting UP your identity</h2>
+<div><br></div>
+<div>git config --global user.name "Your Name"</div>
+<div>git config --global user.email you@example.com</div>
+<div><br></div>
+<div><pre><code class=" hljs nsis"><font color="#00ff00">~/blog $</font> git config --global <span class="hljs-literal">user</span>.name <span class="hljs-string">"pikachu"</span>
+<font color="#00ff00">~/blog $</font> git config --global <span class="hljs-literal">user</span>.email <span class="hljs-string">"pikachu@pk.mn"</span></code><code class=" hljs "></code><code class=" hljs nsis"><font color="#00ff00">~/blog $</font> git config --global -l
+<span class="hljs-literal">user</span>.name=pikachu
+<span class="hljs-literal">user</span>.email=pikachu@pk.mn</code></pre></div></section><section style="display: block;" class="future" aria-hidden="true" hidden=""><h2>REPOSITORY INFORMATION</h2>
+<div><br></div>
+<div><pre><code class=" hljs nix"><font color="#00ff00">~/blog $</font> git config -l
+user.<span class="hljs-variable">name=</span>pikachu
+user.<span class="hljs-variable">email=</span>pikachu@pk.mn
+core.<span class="hljs-variable">repositoryformatversion=</span><span class="hljs-number">0</span>
+core.<span class="hljs-variable">filemode=</span><span class="hljs-constant">true</span>
+core.<span class="hljs-variable">bare=</span><span class="hljs-constant">false</span>
+core.<span class="hljs-variable">logallrefupdates=</span><span class="hljs-constant">true</span>
+remote.origin.<span class="hljs-variable">url=</span>https://github.com/pikachu/TestRepo.git
+remote.origin.<span class="hljs-variable">fetch=</span>+refs/heads<span class="hljs-comment">/*:refs/remotes/origin/*
+branch.master.remote=origin
+branch.master.merge=refs/heads/master </span></code></pre></div>
+<div><br></div></section><section style="display: block;" class="future" aria-hidden="true" hidden=""><h2>WORKING TREE STATUS</h2>
+<div>svn status</div>
+<div>git status</div>
+<div><br></div>
+<div><pre><code class=" hljs smalltalk"><font color="#00ff00">~/blog <span class="hljs-char">$</span></font><span class="hljs-char"> </span>vim home.py
+<span style=""><font color="#00ff00">~/blog <span class="hljs-char">$</span></font><span class="hljs-char"> </span>git status</span></code><code class=" hljs vala"><span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor"># Initial commit</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor"># Untracked files:</span>
+<span class="hljs-preprocessor">#   (use "git add &lt;file&gt;..." to include in what will be committed)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#	home.py</span>
+nothing added to commit but untracked files present (use <span class="hljs-string">"git add"</span> to track)</code></pre></div></section><section style="display: none;" class="future" aria-hidden="true" hidden=""><h2>ADDING A FILE TO BE TRACKED</h2>
+<div><br></div>
+<div><b>tells git to track a specific file</b></div>
+<div>
+<div style="font-size: 35.55104064941406px; font-style: normal; font-variant: normal;">svn add</div>
+<div style="font-size: 35.55104064941406px; font-style: normal; font-variant: normal;">git add</div>
+</div>
+<div><br></div>
+<div>
+<div><pre><code class=" hljs vala"><font color="#00ff00">~/blog $</font> git add home.py
+<font color="#00ff00">~/blog $</font> git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor"># Initial commit</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor"># Changes to be committed:</span>
+<span class="hljs-preprocessor"># &nbsp; (use "git rm --cached </span><file><span class="hljs-preprocessor">..." to unstage)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#	new file: &nbsp; home.py</span>
+<span class="hljs-preprocessor">#</span></file></code></pre></div>
+</div></section><section style="display: none;" class="future" aria-hidden="true" hidden=""><h2>COMMITTING YOUR FIRST FILES</h2>
+<div><br></div>
+<div>svn commit -m "First Commit"</div>
+<div>
+<span style="font-size: 35.55104064941406px; font-style: normal; font-variant: normal;">git commit -m "First Commit"</span><br>
+</div>
+<div><br></div>
+<div><pre><code class=" hljs sql"><span style=""><font color="#00ff00"> ~/blog $</font> git <span class="hljs-operator"><span class="hljs-keyword">commit</span> -m <span class="hljs-string">"First Commit"</span>
+</span></span><span style=""><span class="hljs-operator">[<span class="hljs-keyword">master</span> (root-<span class="hljs-keyword">commit</span>) f40d943] <span class="hljs-keyword">First</span> <span class="hljs-keyword">Commit</span></span></span></code></pre></div></section><section style="display: none;" class="stack future" aria-hidden="true" hidden=""><section style="display: none;"><h2 data-fragment-index="0">git stage</h2>
+<div data-fragment-index="1">Stores information that will go into your next commit or readying a file for commit<br>
+</div>
+<div data-fragment-index="2"><pre><code class=" hljs vala"><font color="#00ff00">~/blog $</font> git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor"># Your branch is ahead of 'origin/master' by 3 commits.</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor"># Changes not staged for commit:</span>
+<span class="hljs-preprocessor"># &nbsp; (use "git add </span><file><span class="hljs-preprocessor">..." to update what will be committed)</span>
+<span class="hljs-preprocessor"># &nbsp; (use "git checkout -- </span><file><span class="hljs-preprocessor">..." to discard changes in working directory)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#	modified: &nbsp; home.py</span>
+<span class="hljs-preprocessor">#</span>
+no changes added to commit (use <span class="hljs-string">"git add"</span> and/or <span class="hljs-string">"git commit -a"</span>) </file></file></code></pre></div>
+<div class="fragment" data-fragment-index="0"><pre><code class=" hljs vala"><font color="#00ff00">~/blog $ </font>git stage home.py
+<font color="#00ff00">~/blog $</font> git status
+<span class="hljs-preprocessor"># On branch master</span>
+<span class="hljs-preprocessor"># Your branch is ahead of 'origin/master' by 3 commits.</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor"># Changes to be committed:</span>
+<span class="hljs-preprocessor"># &nbsp; (use "git reset HEAD </span><file><span class="hljs-preprocessor">..." to unstage)</span>
+<span class="hljs-preprocessor">#</span>
+<span class="hljs-preprocessor">#	modified: &nbsp; home.py </span>
+<font color="#00ff00">~/blog $</font> git commit -m <span class="hljs-string">"Commit Message"</span></file></code></pre></div>
+<div><br></div>
+<div><br></div>
+<div><br></div></section><section style="display: none;" aria-hidden="true" class="future"><h2>UN-STAGING A FILE</h2>
+<div><br></div>
+<div><div><pre><code class=" hljs sql"><font color="#00ff00">~/blog $</font> git <span class="hljs-operator"><span class="hljs-keyword">reset</span> home.py
+Unstaged changes <span class="hljs-keyword">after</span> <span class="hljs-keyword">reset</span>:
+M	home.py
+</span><font color="#00ff00"><span class="hljs-operator">~/blog $</span></font><span class="hljs-operator"> git <span class="hljs-keyword">status</span>
+# <span class="hljs-keyword">On</span> branch <span class="hljs-keyword">master</span>
+# Your branch <span class="hljs-keyword">is</span> ahead <span class="hljs-keyword">of</span> <span class="hljs-string">'origin/master'</span> <span class="hljs-keyword">by</span> <span class="hljs-number">3</span> commits.
+#
+# Changes <span class="hljs-keyword">not</span> staged <span class="hljs-keyword">for</span> <span class="hljs-keyword">commit</span>:
+# &nbsp; (<span class="hljs-keyword">use</span> <span class="hljs-string">"git add </span></span><file><span class="hljs-operator"><span class="hljs-string">..."</span> <span class="hljs-keyword">to</span> <span class="hljs-keyword">update</span> what will be committed)
+# &nbsp; (<span class="hljs-keyword">use</span> <span class="hljs-string">"git checkout -- </span></span><file><span class="hljs-operator"><span class="hljs-string">..."</span> <span class="hljs-keyword">to</span> discard changes <span class="hljs-keyword">in</span> working directory)
+#
+#	modified: &nbsp; home.py
+#
+<span class="hljs-keyword">no</span> changes added <span class="hljs-keyword">to</span> <span class="hljs-keyword">commit</span> (<span class="hljs-keyword">use</span> <span class="hljs-string">"git add"</span> <span class="hljs-keyword">and</span>/<span class="hljs-keyword">or</span> <span class="hljs-string">"git commit -a"</span>)
+ </span></file></file></code></pre></div></div>
+<div><br></div></section></section><section style="display: none;" class="future" aria-hidden="true" hidden=""><h2>PUSH YOUR CHANGES FROM EXISTING REPO TO A REMOTE REPO</h2>
+<div><br></div>
+<div>equivalent to your first <i>svn import</i>
+</div>
+<div><pre><code class=" hljs livecodeserver"><font color="#00ff00">~/blog $</font> git remote <span class="hljs-built_in">add</span> origin <span class="hljs-keyword">https</span>://github.com/pikachu/TestRepo.git
+<font color="#00ff00">~/blog $</font> git push -u origin master
+Username:&nbsp;
+Password:&nbsp;
+Counting objects: <span class="hljs-number">6</span>, done.
+Compressing objects: <span class="hljs-number">100</span>% (<span class="hljs-number">2</span>/<span class="hljs-number">2</span>), done.
+Writing objects: <span class="hljs-number">100</span>% (<span class="hljs-number">6</span>/<span class="hljs-number">6</span>), <span class="hljs-number">507</span> <span class="hljs-keyword">bytes</span>, done.
+Total <span class="hljs-number">6</span> (delta <span class="hljs-number">0</span>), reused <span class="hljs-number">0</span> (delta <span class="hljs-number">0</span>)
+To <span class="hljs-keyword">https</span>://github.com/pikachu/TestRepo.git
+&nbsp;* [<span class="hljs-built_in">new</span> branch] &nbsp; &nbsp; &nbsp;master -&gt; master
+Branch master <span class="hljs-built_in">set</span> up <span class="hljs-built_in">to</span> track remote branch master <span class="hljs-built_in">from</span> origin.</code></pre></div></section><section style="display: none;" class="future" aria-hidden="true" hidden=""><h2>Git PULL</h2>
+<div><br></div>
+<div>like&nbsp;<i>svn update</i>
+</div>
+<div><b>Updates your local working copy <br>from your remote server</b></div>
+<div><div><pre><code class=" hljs fsharp"><font color="#00ff00">~/blog $ </font>git pull
+Password:&nbsp;
+remote: Counting objects: <span class="hljs-number">2</span>, <span class="hljs-keyword">done</span>.
+remote: Compressing objects: <span class="hljs-number">100</span>% (<span class="hljs-number">2</span>/<span class="hljs-number">2</span>), <span class="hljs-keyword">done</span>.
+remote: Total <span class="hljs-number">41</span> (delta <span class="hljs-number">27</span>), reused <span class="hljs-number">0</span> (delta <span class="hljs-number">0</span>)
+Unpacking objects: <span class="hljs-number">100</span>% (<span class="hljs-number">41</span>/<span class="hljs-number">41</span>), <span class="hljs-keyword">done</span>.
+From https:<span class="hljs-comment">//github.com/pikachu/TestRepo.git</span>
+&nbsp; &nbsp;<span class="hljs-number">1</span>ad00c7.<span class="hljs-number">.320</span>bd11 &nbsp;master &nbsp; &nbsp; -&gt; origin/master
+Updating <span class="hljs-number">1</span>ad00c7.<span class="hljs-number">.320</span>bd11
+Fast-forward
+&nbsp;home.py &nbsp; | &nbsp; &nbsp;<span class="hljs-number">8</span> ++
+&nbsp;<span class="hljs-number">1</span> files changed, <span class="hljs-number">20</span> insertions(+), <span class="hljs-number">13</span> deletions(-)
+ 
+
+</code></pre></div></div></section><section style="display: none;" class="future" aria-hidden="true" hidden=""><h2>GIT PUSH</h2>
+<div><br></div>
+<div>git push lets you move a local branch to <br>another or remote repository.</div>
+<div><br></div>
+<div><pre><code class=" hljs fsharp"><font color="#00ff00">~/blog $</font> git push
+Username:&nbsp;
+Password:&nbsp;
+Counting objects: <span class="hljs-number">12</span>, <span class="hljs-keyword">done</span>.
+Compressing objects: <span class="hljs-number">100</span>% (<span class="hljs-number">7</span>/<span class="hljs-number">7</span>), <span class="hljs-keyword">done</span>.
+Writing objects: <span class="hljs-number">100</span>% (<span class="hljs-number">10</span>/<span class="hljs-number">10</span>), <span class="hljs-number">807</span> bytes, <span class="hljs-keyword">done</span>.
+Total <span class="hljs-number">10</span> (delta <span class="hljs-number">3</span>), reused <span class="hljs-number">0</span> (delta <span class="hljs-number">0</span>)
+To https:<span class="hljs-comment">//github.com/pikachu/TestRepo.git</span>
+&nbsp; &nbsp;<span class="hljs-number">6502</span>f62..b8fd39d &nbsp;master -&gt; master </code></pre></div>
+<div><br></div></section><section style="display: none;" class="future" aria-hidden="true" hidden=""><h2>
+<span style="font-size: 64.566px;">THANK YOU!!</span><br>
+</h2>
+<div>
+<p><br></p>
+<p><br></p>
+<p><span></span></p>
+</div></section>
+				</div>
+			<div class="backgrounds"><div class="slide-background past" data-loaded="true" style="display: none;"></div><div class="slide-background past" data-loaded="true" style="display: none;"></div><div class="slide-background past" data-loaded="true" style="display: none;"></div><div class="slide-background past" data-loaded="true" style="display: none;"></div><div class="slide-background past" data-loaded="true" style="display: block;"></div><div class="slide-background past" data-loaded="true" style="display: block;"></div><div class="slide-background present" data-loaded="true" style="display: block;"></div><div class="slide-background future" data-loaded="true" style="display: block;"></div><div class="slide-background future" data-loaded="true" style="display: block;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background stack future" style="display: none;"><div class="slide-background present" style="display: none;"></div><div class="slide-background future" style="display: none;"></div></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" data-loaded="true" style="display: none;"></div><div class="slide-background future" data-loaded="true" style="display: none;"></div><div class="slide-background future" data-loaded="true" style="display: none;"></div></div><div style="display: block;" class="progress"><span style="width: 360px;"></span></div><aside style="display: block;" class="controls"><div class="navigate-left enabled"></div><div class="navigate-right enabled"></div><div class="navigate-up"></div><div class="navigate-down"></div></aside><div class="slide-number"></div><div class="state-background"></div><div class="pause-overlay"></div><div aria-atomic="true" aria-live="polite" id="aria-status-div" style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);">Setting UP your identity
+
+git config --global user.name "Your Name"
+git config --global user.email you@example.com
+
+~/blog $ git config --global user.name "pikachu"
+~/blog $ git config --global user.email "pikachu@pk.mn"~/blog $ git config --global -l
+user.name=pikachu
+user.email=pikachu@pk.mn</div></div>
+		</div>
+	</div>
+
+	<div style="opacity: 1;" class="deck-kudos">
+		
+	</div>
+
+	
+
+</div>
+
+
+
+      </div>
+      
+    </div> <!--! end of #container -->
+    
+
+    <script src="./files/application-1b74cc3b376c823ed43fa920accbf9a4.js" type="text/javascript"></script><div id="modal"></div><div id="modal-cover"></div><div id="modal-background"></div><div id="modal"></div><div id="modal-cover"></div><div id="modal-background"></div>
+    	<script src="./files/reveal.js" type="text/javascript"></script>
+	<script type="text/javascript" src="file:///C:/assets/reveal-plugins/highlight/highlight.js"></script></body></html>
